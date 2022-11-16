@@ -9,6 +9,7 @@ on:
     branches: [ develop ]
 jobs:
   Deploy-Preview:
+    needs: build_test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
