@@ -16,7 +16,7 @@ const Feature = () => {
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">Next JS</h2>
               <p className="leading-relaxed text-base">Next.js est un framework React qui vous permet de créer des sites web statiques et des applications web surpuissantes, adaptés au référencement et extrêmement conviviaux à l’aide du framework React.</p>
               <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
               </a>
@@ -30,7 +30,7 @@ const Feature = () => {
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">Tailwind CSS</h2>
               <p className="leading-relaxed text-base">Tailwind CSS est un framework CSS populaire intégralement utility-first. Il fournit aux utilisateurs des classes CSS de bas niveau en PostCSS qui peuvent être utilisées pour définir des composants et des designs de manière indépendante.</p>
               <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
               </a>
@@ -39,7 +39,7 @@ const Feature = () => {
           <div className="p-4 md:w-1/3 flex">
             <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
               <svg viewBox=".24262095 .26549587 243.32256626 243.58072911" width="2500" xmlns="http://www.w3.org/2000/svg">
-                <g fill="#8e75ff" fill-rule="evenodd">
+                <g fill="#8e75ff" fillRule="evenodd">
                   <path d="m161.893 165.833v-78.73a5.077 5.077 0 0 0 -5.077-5.076h-78.638v-81.267h159.815a5.077 5.077 0 0 1 5.078 5.077v159.996z" />
                   <path d="m78.178.76v81.267h-75.054a2.539 2.539 0 0 1 -1.796-4.333zm83.715 240.206v-75.133h81.178l-76.844 76.927a2.539 2.539 0 0 1 -4.334-1.794zm-83.715-158.939h81.176a2.539 2.539 0 0 1 2.539 2.538v81.268h-78.638a5.077 5.077 0 0 1 -5.077-5.077z" opacity=".405" />
                 </g>
@@ -49,7 +49,7 @@ const Feature = () => {
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">Strapi</h2>
               <p className="leading-relaxed text-base">Strapi est l&apos; des leaders des CMS headless (systèmes de gestion de contenu), il est open-source et a été développé par une start-up française. Il permettra à nos utilisateurs de gérer le contenu de leur site de façon simple et sécurisé, sans aucune connssance en programmation.</p>
               <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
               </a>

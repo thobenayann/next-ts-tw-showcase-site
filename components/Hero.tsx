@@ -42,10 +42,16 @@ const Hero = () => {
           height={500}
         />
         <div className="mx-8 md:mx-14">
-          <h1 className="text-4xl md:text-5xl font-bold my-4">Voici une demo de site exploitant le modèle d&apos;architecture de la Jamstack !</h1>
-          <p className="py-6 my-4">La Jamstack permet de délivrer un site web statique, tout en fournissant un contenu dynamique, pour proposer une expérience utilisateur interactive et moderne.</p>
+          <h1 className="text-4xl md:text-5xl font-bold my-4 font-['bagnar']">Voici une demo de site exploitant le modèle d&apos;architecture de la Jamstack !</h1>
+          <p className="py-6 my-4 text-lg">La <strong className="font-semibold text-slate-900 underline decoration-pink-500 decoration-4">Jamstack</strong> permet de délivrer un <strong className="font-semibold text-slate-900 underline decoration-sky-500 decoration-4">site web statique</strong>, tout en fournissant un contenu dynamique, pour proposer une <strong className="font-semibold text-slate-900 underline decoration-amber-500 decoration-4">expérience utilisateur</strong> interactive et moderne.</p>
           <button className="btn btn-primary">Get Started</button>
         </div>
+      </div>
+      {/* Blurry, Animated Background Shapes */}
+      <div className="relative w-full max-w-screen md:max-w-3xl">
+        <div className="absolute top-0 -left-4 md:-left-3/4 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div className="absolute top-28 -right-4 w-72 h-72 bg-amber-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-sky-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
       </div>
     </div>
   )
