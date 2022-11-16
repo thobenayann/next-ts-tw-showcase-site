@@ -3,10 +3,12 @@ import { useEffect, useState } from 'react';
 
 const Hero = () => {
   function getWindowWidth() {
-    const { innerWidth: width } = window;
-    return {
-      width,
-    };
+    if (typeof window !== "undefined") {
+      const { innerWidth: width } = window;
+      return {
+        width,
+      };
+    }
   }
 
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
@@ -22,7 +24,7 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    if (windowWidth.width < 640) {
+    if (windowWidth && windowWidth.width < 640) {
       setIsMobileWidth(true);
     } else {
       setIsMobileWidth(false);
@@ -30,7 +32,7 @@ const Hero = () => {
   }, [windowWidth]);
 
   return (
-    <div className={`min-h-screen bg-base-200 ${isMobileWidth ? '' : 'hero'}`}>
+    <div style={{ height: '92vh' }} className={`bg-base-200 ${isMobileWidth ? '' : 'hero'}`}>
       <div className="hero-content flex-col lg:flex-row-reverse mt-6 md:mt-0">
         <Image
           alt="hero"
