@@ -7,9 +7,13 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_run:
+    workflows: ["CI-CD-Build"]
+    branches: [main]
+    types: 
+      - completed
 jobs:
   Deploy-Production:
-    needs: build_test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
