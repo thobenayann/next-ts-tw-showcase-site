@@ -16,7 +16,7 @@ const Feature = () => {
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">Next JS</h2>
               <p className="leading-relaxed text-base">Next.js est un framework React qui vous permet de créer des sites web statiques et des applications web surpuissantes, adaptés au référencement et extrêmement conviviaux à l’aide du framework React.</p>
               <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
               </a>
@@ -30,7 +30,7 @@ const Feature = () => {
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">Tailwind CSS</h2>
               <p className="leading-relaxed text-base">Tailwind CSS est un framework CSS populaire intégralement utility-first. Il fournit aux utilisateurs des classes CSS de bas niveau en PostCSS qui peuvent être utilisées pour définir des composants et des designs de manière indépendante.</p>
               <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
               </a>
@@ -49,7 +49,7 @@ const Feature = () => {
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">Strapi</h2>
               <p className="leading-relaxed text-base">Strapi est l&apos; des leaders des CMS headless (systèmes de gestion de contenu), il est open-source et a été développé par une start-up française. Il permettra à nos utilisateurs de gérer le contenu de leur site de façon simple et sécurisé, sans aucune connssance en programmation.</p>
               <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
               </a>

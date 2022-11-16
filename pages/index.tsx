@@ -5,10 +5,11 @@ import Feature from '@components/Feature';
 import Footer from '@components/Footer';
 import Header from '@components/Header';
 import Hero from '@components/Hero';
+import Step from '@components/Step';
 
 export default function Home() {
   return (
-    <div>
+    <div lang="fr-FR" data-theme="mytheme">
       <Head>
         <title>Jamstack demo by Ipanova</title>
         <meta name="description" content="Démo d'un site au modèle Jamstack exploitant les technos Strapi, NextJS, TailwindCSS et bien d'autres" />
@@ -20,6 +21,7 @@ export default function Home() {
       <main>
         <Hero />
         <Feature />
+        <Step />
       </main>
 
       <Footer />
