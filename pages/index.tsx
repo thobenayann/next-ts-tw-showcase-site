@@ -9,7 +9,7 @@ import Step from '@components/Step';
 
 export default function Home() {
   return (
-    <div lang="fr-FR" data-theme="mytheme">
+    <div className="scroll-smooth" data-theme="mytheme">
       <Head>
         <title>Jamstack demo by Ipanova</title>
         <meta name="description" content="Démo d'un site au modèle Jamstack exploitant les technos Strapi, NextJS, TailwindCSS et bien d'autres" />
