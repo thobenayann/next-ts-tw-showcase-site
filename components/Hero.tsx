@@ -44,7 +44,7 @@ const Hero = () => {
         <div className="mx-8 md:mx-14">
           <h1 className="text-4xl md:text-5xl font-bold my-4 font-['bagnar']">Voici une demo de site exploitant le modèle d&apos;architecture de la Jamstack !</h1>
           <p className="py-6 my-4 text-lg">La <strong className="font-semibold text-slate-900 underline decoration-pink-500 decoration-4">Jamstack</strong> permet de délivrer un <strong className="font-semibold text-slate-900 underline decoration-sky-500 decoration-4">site web statique</strong>, tout en fournissant un contenu dynamique, pour proposer une <strong className="font-semibold text-slate-900 underline decoration-amber-500 decoration-4">expérience utilisateur</strong> interactive et moderne.</p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn btn-primary shadow-xl shadow-blue-500/30">Get Started</button>
         </div>
       </div>
       {/* Blurry, Animated Background Shapes */}

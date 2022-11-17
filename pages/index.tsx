@@ -1,5 +1,4 @@
 import Head from 'next/head';
-
 // components
 import Feature from '@components/Feature';
 import Footer from '@components/Footer';
@@ -8,6 +7,7 @@ import Hero from '@components/Hero';
 import Step from '@components/Step';
 
 export default function Home() {
+
   return (
     <div className="scroll-smooth" data-theme="mytheme">
       <Head>
