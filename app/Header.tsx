@@ -34,8 +34,8 @@ const Header = () => {
             </Link>
           </label>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-            <li><a href={`${process.env.BASE_URL}/#feature`}>Stack</a></li>
-            <li><a href={`${process.env.BASE_URL}/#step`}>Méthode</a></li>
+            <li><a href={`${process.env.NODE_ENV === 'development' ?? process.env.BASE_URL}/#feature`}>Stack</a></li>
+            <li><a href={`${process.env.NODE_ENV === 'development' ?? process.env.BASE_URL}/#step`}>Méthode</a></li>
             <li><Link href="/articles">Blog</Link></li>
           </ul>
         </div>
@@ -45,8 +45,8 @@ const Header = () => {
       {/* Navbar desktop */}
       <nav className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
-          <li><a href={`${process.env.BASE_URL}/#feature`}>Stack</a></li>
-          <li><a href={`${process.env.BASE_URL}/#step`}>Méthode</a></li>
+          <li><a href={`${process.env.NODE_ENV === 'development' ?? process.env.BASE_URL}/#feature`}>Stack</a></li>
+          <li><a href={`${process.env.NODE_ENV === 'development' ?? process.env.BASE_URL}/#step`}>Méthode</a></li>
           <li><Link href="/articles">Blog</Link></li>
         </ul>
       </nav>
