@@ -10,7 +10,7 @@ export type Article = {
     tag: string;
     publishedAt: Date;
     locale: string;
-    image?: {
+    image: {
       data: {
         id: number,
         attributes: {

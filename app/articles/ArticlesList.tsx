@@ -10,7 +10,6 @@ const fetchArticles = async () => {
 
 async function ArticlesList() {
   const articles: Article[] = await fetchArticles();
-  console.log(articles);
 
   return (
     <section className="text-gray-600 body-font">
