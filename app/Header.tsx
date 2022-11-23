@@ -35,6 +35,7 @@ const Header = () => {
             <li><a href={`${process.env.NODE_ENV === 'development' ? process.env.BASE_URL : ''}/#feature`}>Stack</a></li>
             <li><a href={`${process.env.NODE_ENV === 'development' ? process.env.BASE_URL : ''}/#step`}>Méthode</a></li>
             <li><Link href="/articles">Blog</Link></li>
+            <li><Link href="/video">Vidéo</Link></li>
           </ul>
         </div>
         {/* Logo */}
@@ -48,6 +49,7 @@ const Header = () => {
           <li><a href={`${process.env.NODE_ENV === 'development' ? process.env.BASE_URL : ''}/#feature`}>Stack</a></li>
           <li><a href={`${process.env.NODE_ENV === 'development' ? process.env.BASE_URL : ''}/#step`}>Méthode</a></li>
           <li><Link href="/articles">Blog</Link></li>
+          <li><Link href="/video">Vidéo</Link></li>
         </ul>
       </nav>
       {/* Searchbar */}
