@@ -11,8 +11,20 @@ type ArticleProps = {
 // I need to fetch every element instead of using props as usual
 const fetchArticle = async (articleId: string) => {
   const res = await fetch(
-    `${process.env.API_URL}/posts/${articleId}?populate=*`,
-  );
+    `${process.env.API_URL}/posts/${articleId}?populate=*`, {
+    // To force server-side rendering, use :
+    // 'no-cache'
+    // To force static-site generation, use :
+    // 'force-cache'
+    // To use ISR wich allow us to revalidate the cache after a certain time :
+    next: { revalidate: 60 }
+    // How it works
+    // When a request is made to the route that was statically rendered at build time, it will initially show the cached data.
+    // Any requests to the route after the initial request and before 60 seconds are also cached and instantaneous.
+    // After the 60-second window, the next request will still show the cached (stale) data.
+    // Next.js will trigger a regeneration of the data in the background.
+    // Once the route generates successfully, Next.js will invalidate the cache and show the updated route. If the background regeneration fails, the old data would still be unaltered.
+  });
 
   const { data: article }: ApiResponse = await res.json();
   return article;
@@ -20,7 +32,6 @@ const fetchArticle = async (articleId: string) => {
 
 async function Article({ params: { articleId } }: ArticleProps) {
   const article: Article = await fetchArticle(articleId);
-  console.log(article);
   const dateFormated = new Date(article.attributes.publishedAt).toLocaleDateString('fr-FR', {
     day: 'numeric',
     month: 'long',
@@ -91,3 +102,11 @@ async function Article({ params: { articleId } }: ArticleProps) {
 }
 
 export default Article;
+
+export async function generateStaticParams() {
+  const res = await fetch(`${process.env.API_URL}/posts`);
+  const { data: articles }: ApiResponse = await res.json();
+  return articles.map((article: Article) => ({
+    articleId: article.id.toString(),
+  }));
+}
