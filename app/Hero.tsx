@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
@@ -32,7 +33,7 @@ const Hero = () => {
   }, [windowWidth]);
 
   return (
-    <div style={{ height: '92vh' }} className={`bg-base-200 ${isMobileWidth ? '' : 'hero'}`}>
+    <div style={{ height: '92vh' }} className={`bg-base-200 ${isMobileWidth ? '' : 'hero'}`} id="hero">
       <div className="hero-content flex-col lg:flex-row-reverse mt-6 md:mt-0">
         <Image
           alt="hero"
