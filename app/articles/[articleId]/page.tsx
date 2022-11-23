@@ -1,5 +1,11 @@
 import Image from "next/image";
+import { notFound } from 'next/navigation';
 import { ApiResponse, Article } from "typing";
+
+// by default, this params is true
+// we can explode this to dynamicly know if an article exist or not
+// and render the article OR the notFound page
+export const dynamicParams = true;
 
 type ArticleProps = {
   params: {
@@ -32,11 +38,15 @@ const fetchArticle = async (articleId: string) => {
 
 async function Article({ params: { articleId } }: ArticleProps) {
   const article: Article = await fetchArticle(articleId);
+  // notFound
+  if (!article) return notFound();
+
   const dateFormated = new Date(article.attributes.publishedAt).toLocaleDateString('fr-FR', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
   });
+
   return (
     <article className="px-96 py-20 min-h-[80vh]">
       {
