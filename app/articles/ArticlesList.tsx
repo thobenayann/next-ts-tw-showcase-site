@@ -30,15 +30,10 @@ async function ArticlesList() {
                 <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl bg-base-200">
                   <div className="w-full h-36 relative">
                     <Image
-                      className="lg:h-48 md:h-36 w-full object-cover object-center"
+                      className={`lg:h-48 md:h-36 w-full object-center ${article.attributes.image?.data.attributes.ext === '.svg' ? 'object-contain' : 'object-cover'}`}
                       src={article.attributes.image ? article.attributes.image?.data.attributes.url : "https://placeimg.com/720/400/any"}
                       alt="blog"
                       fill
-                      objectFit={article.attributes.image?.data.attributes.ext === '.svg' ? 'contain' : 'cover'}
-                      objectPosition="center"
-                      sizes="(min-width: 66em) 33vw,
-                      (min-width: 44em) 50vw,
-                      100vw"
                     />
                   </div>
                   <div className="p-6">

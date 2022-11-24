@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <>
-      <div className="divider"></div>
+      <div className="divider mt-0"></div>
       <footer className="footer footer-center p-10 text-base-content rounded">
         <div className="grid grid-flow-col gap-4">
           <a className="link link-hover">About us</a>
