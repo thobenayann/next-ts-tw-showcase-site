@@ -37,3 +37,49 @@ export type Article = {
     }
   }
 }
+
+export type Product = {
+  id: number,
+  attributes: {
+    label: string,
+    short_description: string,
+    detail: string,
+    price: number,
+    discount: number,
+    isNew: boolean,
+    slug: string,
+    publishedAt: Date,
+    image: {
+      data: {
+        id: number,
+        attributes: {
+          ext: string,
+          url: string,
+          alternativeText: string,
+          width: number,
+          height: number,
+        }
+      }
+    }
+    product_category: {
+      data: {
+        id: number,
+        attributes: {
+          label: string,
+          description: string,
+          slug: string,
+          publishedAt: Date,
+          icon_source: string,
+        }
+      }
+    }
+  }
+}
+
+export type ProductCategory = {
+  id: number,
+  attributes: {
+    label: string,
+    description: string,
+  }
+}
