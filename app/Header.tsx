@@ -12,6 +12,7 @@ const Header = () => {
       attributes: {
         label: "Tous les produits",
         slug: "products",
+        path: "products"
       }
     },
     {
@@ -19,6 +20,7 @@ const Header = () => {
       attributes: {
         label: "Hardware",
         slug: "hardware",
+        path: "products#hardware"
       }
     },
     {
@@ -26,6 +28,7 @@ const Header = () => {
       attributes: {
         label: "E-learning",
         slug: "e-learning",
+        path: "products#e-learning"
       }
     },
     {
@@ -33,6 +36,7 @@ const Header = () => {
       attributes: {
         label: "Figurines",
         slug: "figurines",
+        path: "products#figurines"
       }
     }
   ];
@@ -76,7 +80,15 @@ const Header = () => {
                 {
                   productListCategories.map((category) => (
                     <li key={category.id}>
-                      <Link href={`/${category.attributes.slug}`}>{category.attributes.label}</Link>
+                      {
+                        category.attributes.path === '/products'
+                          ? (
+                            <Link href={`/${category.attributes.path}`}>{category.attributes.label}</Link>
+                          )
+                          : (
+                            <a href={`/${category.attributes.path}`}>{category.attributes.label}</a>
+                          )
+                      }
                     </li>
                   ))
                 }
@@ -105,7 +117,15 @@ const Header = () => {
               {
                 productListCategories.map((category) => (
                   <li key={category.id}>
-                    <Link href={`/${category.attributes.slug}`}>{category.attributes.label}</Link>
+                    {
+                      category.attributes.path === '/products'
+                        ? (
+                          <Link href={`/${category.attributes.path}`}>{category.attributes.label}</Link>
+                        )
+                        : (
+                          <a href={`/${category.attributes.path}`}>{category.attributes.label}</a>
+                        )
+                    }
                   </li>
                 ))
               }

@@ -81,5 +81,20 @@ export type ProductCategory = {
   attributes: {
     label: string,
     description: string,
-  }
+    slug: string,
+    icon: {
+      data: {
+        id: number,
+        attributes: {
+          url: string,
+          alternativeText: string,
+          width: number,
+          height: number,
+        }
+      }
+    }
+    products: {
+      data: Product[]
+    }
+  },
 }
