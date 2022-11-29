@@ -5,8 +5,44 @@ import { useEffect, useState } from 'react';
 
 const Header = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
+  // todo fetch productListCategories in client component
+  const productListCategories = [
+    {
+      id: 1,
+      attributes: {
+        label: "Tous les produits",
+        slug: "products",
+        path: "products"
+      }
+    },
+    {
+      id: 2,
+      attributes: {
+        label: "Hardware",
+        slug: "hardware",
+        path: "products#hardware"
+      }
+    },
+    {
+      id: 3,
+      attributes: {
+        label: "E-learning",
+        slug: "e-learning",
+        path: "products#e-learning"
+      }
+    },
+    {
+      id: 4,
+      attributes: {
+        label: "Figurines",
+        slug: "figurines",
+        path: "products#figurines"
+      }
+    }
+  ];
 
   useEffect(() => {
+    // get windows width for conditionnal rendering
     window.addEventListener('scroll', () => {
       if (window.scrollY > 400) {
         setShowTopBtn(true);
@@ -35,6 +71,29 @@ const Header = () => {
             <li><a href={`${process.env.NODE_ENV === 'development' ? process.env.BASE_URL : ''}/#feature`}>Stack</a></li>
             <li><a href={`${process.env.NODE_ENV === 'development' ? process.env.BASE_URL : ''}/#step`}>Méthode</a></li>
             <li><Link href="/articles">Blog</Link></li>
+            <li tabIndex={0}>
+              <a className="justify-between">
+                Products
+                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+              </a>
+              <ul className="p-2 bg-base-100">
+                {
+                  productListCategories.map((category) => (
+                    <li key={category.id}>
+                      {
+                        category.attributes.path === '/products'
+                          ? (
+                            <Link href={`/${category.attributes.path}`}>{category.attributes.label}</Link>
+                          )
+                          : (
+                            <a href={`/${category.attributes.path}`}>{category.attributes.label}</a>
+                          )
+                      }
+                    </li>
+                  ))
+                }
+              </ul>
+            </li>
             <li><Link href="/video">Vidéo</Link></li>
           </ul>
         </div>
@@ -49,6 +108,29 @@ const Header = () => {
           <li><a href={`${process.env.NODE_ENV === 'development' ? process.env.BASE_URL : ''}/#feature`}>Stack</a></li>
           <li><a href={`${process.env.NODE_ENV === 'development' ? process.env.BASE_URL : ''}/#step`}>Méthode</a></li>
           <li><Link href="/articles">Blog</Link></li>
+          <li tabIndex={0}>
+            <a>
+              Products
+              <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+            </a>
+            <ul className="p-2 bg-base-100">
+              {
+                productListCategories.map((category) => (
+                  <li key={category.id}>
+                    {
+                      category.attributes.path === '/products'
+                        ? (
+                          <Link href={`/${category.attributes.path}`}>{category.attributes.label}</Link>
+                        )
+                        : (
+                          <a href={`/${category.attributes.path}`}>{category.attributes.label}</a>
+                        )
+                    }
+                  </li>
+                ))
+              }
+            </ul>
+          </li>
           <li><Link href="/video">Vidéo</Link></li>
         </ul>
       </nav>
