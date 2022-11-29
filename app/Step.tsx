@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Step = () => {
   return (
-    <section className="text-gray-600 body-font bg-base-200">
+    <section className="text-gray-600 body-font bg-base-200" id="step">
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
         <div className="flex flex-wrap w-full">
           <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
