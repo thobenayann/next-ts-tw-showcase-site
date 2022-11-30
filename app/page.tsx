@@ -1,6 +1,7 @@
 import Feature from "./Feature";
 import Hero from "./Hero";
 import Step from "./Step";
+
 function Home() {
   return (
     <main>

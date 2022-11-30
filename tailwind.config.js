@@ -20,6 +20,8 @@ module.exports = {
           'bounce-x': 'bounceX 0.7s linear infinite',
           'fade-in-down': 'fade-in-down 0.5s ease-out',
           'blob': 'blob 7s infinite',
+          'fade-in-x': 'fade-in-x 0.5s ease-in-out',
+          'fade-out-x': 'fade-out-x 0.5s ease-in-out',
         },
         keyframes: {
           bounceX: {
@@ -34,6 +36,26 @@ module.exports = {
             '100%': {
               opacity: '1',
               transform: 'translateY(0)',
+            },
+          },
+          'fade-in-x': {
+            '0%': {
+              opacity: 0,
+              transform: 'translateX(100%)',
+            },
+            '100%': {
+              opacity: 1,
+              transform: 'translateX(0)',
+            },
+          },
+          'fade-out-x': {
+            '0%': {
+              opacity: 1,
+              transform: 'translateX(0)',
+            },
+            '100%': {
+              opacity: 0,
+              transform: 'translateX(100%)',
             },
           },
           blob: {
